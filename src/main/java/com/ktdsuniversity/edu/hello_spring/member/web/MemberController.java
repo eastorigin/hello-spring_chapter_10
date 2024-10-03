@@ -29,7 +29,7 @@ public class MemberController {
 	}
 	
 	@PostMapping("/member/regist")
-	public String doRegistMember(@Valid MemberVO memberVO, Model model, BindingResult bindingResult) {
+	public String doRegistMember(@Valid MemberVO memberVO, BindingResult bindingResult, Model model) {
 		if(bindingResult.hasErrors()) {
 			model.addAttribute("memberVO", memberVO);
 			return "member/memberregist";

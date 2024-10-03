@@ -39,17 +39,16 @@ uri="http://www.springframework.org/tags/form" %>
             value="${memberVO.password}"
           />
         </div>
+        <label for="confirmPassword">비밀번호 확인</label>
         <div>
           <form:errors path="confirmPassword" element="div" cssClass="errors" />
-          <label for="confirmPassword">비밀번호 확인</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            value="${memberVO.confirmPassword}"
+          />
         </div>
-        <input
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          value="${memberVO.confirmPassword}"
-        />
-
         <div class="btn-group">
           <div class="right-align">
             <input type="submit" value="등록" />
